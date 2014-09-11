@@ -6,6 +6,14 @@
 
 There's a bunch of [ChatOps](https://github.com/atmos/hubot-deploy/blob/master/docs/chatops.md) commands.
 
+## Forked Customizations
+This is a customized fork of the [atmos/hubot-deploy](https://github.com/atmos/hubot-deploy)
+upstream. Here's a list of customizations.
+
+#### Personalized Github tokens are required
+Each user must give Hubot their own personal Github token. This depends on the
+[github-credentials][7] script in [hubot-scripts][6].
+
 ## Installation
 
 * Add hubot-deploy to your `package.json` file.
@@ -33,3 +41,5 @@ You need to set the following environmental variables.
 [3]: https://hubot.github.com
 [4]: https://developer.github.com/v3/activity/events/types/#deploymentevent
 [5]: https://developer.github.com/v3/repos/deployments/
+[6]: https://github.com/github/hubot-scripts
+[7]: https://github.com/github/hubot-scripts/blob/master/src/scripts/github-credentials.coffee

@@ -32,4 +32,5 @@ module.exports = (robot) ->
   robot.respond ///#{DeployPrefix}-token:reset///i, (msg) ->
     user = robot.brain.userForId msg.envelope.user.id
     delete(user.githubDeployToken)
-    msg.reply "I nuked your deployment token. I'll use my default token until you configure another."
+    msg.reply "I nuked your deployment token. You'll need to give me another " +
+              "one before you can deploy again."

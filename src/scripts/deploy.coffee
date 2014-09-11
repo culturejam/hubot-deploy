@@ -65,7 +65,22 @@ module.exports = (robot) ->
     env   = (msg.match[5]||'production')
     hosts = (msg.match[6]||'')
 
-    username = msg.envelope.user.githubLogin or msg.envelope.user.name
+    # Make sure the user is identified on Github and has a personal token.
+    unless msg.envelope.user.githubLogin
+      msg.reply "Do you even Github, bro? " +
+                "Tell me your Github username like this, " +
+                "'i am <username>'."
+      return
+    unless msg.envelope.user.githubDeployToken
+      msg.reply "Yo dawg. I heard you like to deploy, but I need a personal " +
+                "Github token with deploy scope. Give this to me with a " +
+                "command like 'deploy-token:set <token>'. You should do this " +
+                "in a private chat so it stays our little secret."
+      msg.reply "Here's a link to make the token on Github: " +
+                "https://github.com/settings/applications"
+      return
+
+    username = msg.envelope.user.githubLogin
 
     deployment = new Deployment(name, ref, task, env, force, hosts)
 
