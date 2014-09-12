@@ -62,8 +62,12 @@ module.exports = (robot) ->
     force = msg.match[2] == '!'
     name  = msg.match[3]
     ref   = (msg.match[4]||'master')
-    env   = (msg.match[5]||'production')
+    env   = msg.match[5]
     hosts = (msg.match[6]||'')
+
+    unless env
+      msg.reply "You need to tell me which environment, like 'deploy #{name} to <env>'."
+      return
 
     # Make sure the user is identified on Github and has a personal token.
     unless msg.envelope.user.githubLogin

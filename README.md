@@ -14,6 +14,10 @@ upstream. Here's a list of customizations.
 Each user must give Hubot their own personal Github token. This depends on the
 [github-credentials][7] script in [hubot-scripts][6].
 
+#### No default environment
+You must present an environment when giving Hubot a deploy command. There's no
+default to production.
+
 ## Installation
 
 * Add hubot-deploy to your `package.json` file.
