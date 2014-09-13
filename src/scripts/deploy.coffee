@@ -71,8 +71,7 @@ module.exports = (robot) ->
 
     # Make sure the user is identified on Github and has a personal token.
     unless msg.envelope.user.githubLogin
-      msg.reply "Do you even Github, bro? " +
-                "Tell me your Github username like this, " +
+      msg.reply "Do you even Github? Tell me your Github username like this, " +
                 "'i am <username>'."
       return
     unless msg.envelope.user.githubDeployToken
