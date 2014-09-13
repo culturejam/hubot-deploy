@@ -1,6 +1,6 @@
-# hubot-deploy [![Build Status](https://travis-ci.org/atmos/hubot-deploy.png?branch=master)](https://travis-ci.org/atmos/hubot-deploy)
+# hubot-deploy [![Build Status](https://travis-ci.org/culturejam/hubot-deploy.png?branch=master)](https://travis-ci.org/culturejam/hubot-deploy).
 
-[GitHub Flow][1] via [hubot][3]. Chatting with hubot creates [deployments][2] on GitHub and dispatches [Deployment Events][4].
+[GitHub Flow][1] via [hubot][3]. Chatting with hubot creates [deployments][2] on GitHub and dispatches [Deployment Events][4]. This is a customized fork.
 
 ![](https://f.cloud.github.com/assets/38/2331137/77036ef8-a444-11e3-97f6-68dab6975eeb.jpg)
 
